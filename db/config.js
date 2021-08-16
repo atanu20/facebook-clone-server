@@ -1,6 +1,6 @@
 const mongoose =require('mongoose')
 
-mongoose.connect('mongodb+srv://atanumongo:atanumongo@firstmongoapp.dgqpo.mongodb.net/facebookclone?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://******username***:*****password***@*****.dgqpo.mongodb.net/***database***?retryWrites=true&w=majority',{
     useCreateIndex:true,
     useNewUrlParser:true,
     useUnifiedTopology:true,
