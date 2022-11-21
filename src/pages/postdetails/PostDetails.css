@@ -1,0 +1,129 @@
+.userdetails{
+    display: flex;
+}
+.detpost{
+    flex:9;
+}
+.detimg{
+    width: 80%;
+    height: 450px;
+    padding: 15px;
+    display: block;
+    margin: auto;
+}
+.postuserdetails{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.usericonbox{
+    display: flex;
+    justify-content: space-between;
+
+}
+.imguser{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.dat{
+    font-size: 12px !important;
+}
+.likebox{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+.addmsg{
+    width: 75%;
+    margin: 50px auto;
+}
+
+.addmsg .form-control{
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  .addmsg .form-control:focus{
+      
+    box-shadow: none;
+      
+  }
+  .title-bo{
+    padding: 10px;
+    background-color: aliceblue;
+    display: flex;
+   justify-content: space-between;
+    flex-direction: row;
+  }
+  .drop{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .allmsg{
+    padding: 15px;
+    background-color: ghostwhite;
+  }
+  .msgg{
+    display: flex;
+  
+  }
+  .msgbox{
+    padding: 5px;
+  }
+  .msgg h5{
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .msgbox p{
+   
+    padding-left: 10px;
+  }
+  .vimg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .loadd{
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .fdd .container{
+    padding: 50px 10px;
+    
+  }
+  .proimgg{
+    width:100%;
+    height: 150px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  .fdd .card{
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 5px rgb(236, 232, 232);
+  }
+  .fa-heart{
+    font-size: 25px;
+  color: crimson;
+  }

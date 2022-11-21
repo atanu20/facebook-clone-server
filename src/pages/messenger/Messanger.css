@@ -1,0 +1,18 @@
+.messenger{
+    display: flex;
+}
+.prevbox{
+    flex: 5;
+}
+.centerprev{
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: ghostwhite;
+    display: grid;
+    place-items: center;
+}
+.centerprev h1{
+    font-size: 65px;
+    font-weight: 600;
+    color: rgb(230, 225, 225);
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.btn{
+  padding: 7px 25px;
+  border-radius: 0;
+  border: none !important;
+}
+.register{
+  padding: 150px 0;
+  background-color: ghostwhite;
+  height: 100vh;
+}
+.register .card{
+  padding: 15px;
+  border: none !important;
+  box-shadow: 0 5px 5px rgb(152, 238, 253);
+}
+
+.login{
+  padding: 150px 0;
+  background-color: ghostwhite;
+  height: 100vh;
+ 
+
+}
+.login .card{
+  padding: 15px;
+  border: none !important;
+  box-shadow: 0 5px 5px gainsboro;
+}
+.login .form-control {
+  border:2px solid rgb(16, 92, 122) !important;
+  
+}
+.login .form-control:focus , .register .form-control:focus 
+  {
+    
+  box-shadow: none;
+    
+}
+.register .form-control {
+  border:2px solid rgb(34, 125, 161) !important;
+  
+}
+.regimg , .logimg{
+  width: 250px;
+  height: 350px;
+}
+.register a{
+  color: #000;
+}
+.login a{
+  color: #000;
+}
+
+
+.error{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: ghostwhite;
+  height: 100vh;
+}
+.error h1{
+  font-size: 60px ;
+  font-weight: 700;
+  text-shadow:0px 0px 5px rgb(226, 131, 147);
+}
