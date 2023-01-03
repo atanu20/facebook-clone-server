@@ -13,7 +13,7 @@ const Login = () => {
 
   const checkAuth = () => {
     axios
-      .get('https://facebook-node-js-production.up.railway.app/isAuth', {
+      .get('https://facebook-node.onrender.com/isAuth', {
         headers: {
           'x-access-token': localStorage.getItem('Facebooktoken'),
         },
@@ -45,7 +45,7 @@ const Login = () => {
     };
 
     const res = await axios.post(
-      'https://facebook-node-js-production.up.railway.app/login',
+      'https://facebook-node.onrender.com/login',
       data
     );
     console.log(res.data);

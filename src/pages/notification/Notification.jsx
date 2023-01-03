@@ -12,7 +12,7 @@ const Notification = () => {
 
   const checkAuth = () => {
     axios
-      .get('https://facebook-node-js-production.up.railway.app/isAuth', {
+      .get('https://facebook-node.onrender.com/isAuth', {
         headers: {
           'x-access-token': localStorage.getItem('Facebooktoken'),
         },
@@ -36,7 +36,7 @@ const Notification = () => {
   }, []);
   const getnot = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/getNotify/${FacebookUserId}`
+      `https://facebook-node.onrender.com/getNotify/${FacebookUserId}`
     );
     setNotification(
       res.data.sort((p1, p2) => {

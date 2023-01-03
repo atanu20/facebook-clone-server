@@ -7,7 +7,7 @@ const FindDet = ({ u_id }) => {
   const [user, setUser] = useState([]);
   const getUser = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myprofile/${u_id}`
+      `https://facebook-node.onrender.com/myprofile/${u_id}`
     );
 
     //  console.log(res.data)

@@ -17,7 +17,7 @@ const Topbar = ({ setArrivalMessage }) => {
   const history = useHistory();
   const getmyimg = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/getmyimg/${FacebookUserId}`
+      `https://facebook-node.onrender.com/getmyimg/${FacebookUserId}`
     );
     setMyimg(res.data.profilePicture);
   };
@@ -64,9 +64,7 @@ const Topbar = ({ setArrivalMessage }) => {
   };
 
   useEffect(() => {
-    socket.current = io(
-      'https://facebook-socket-server-production.up.railway.app/'
-    );
+    socket.current = io('https://facebook-clone-socket.onrender.com/');
     socket.current?.emit('addUser', FacebookUserId);
     socket.current.on('getFollowNotify', (data) => {
       play();

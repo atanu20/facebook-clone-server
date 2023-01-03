@@ -26,7 +26,7 @@ const Messanger = () => {
 
   const checkAuth = () => {
     axios
-      .get('https://facebook-node-js-production.up.railway.app/isAuth', {
+      .get('https://facebook-node.onrender.com/isAuth', {
         headers: {
           'x-access-token': localStorage.getItem('Facebooktoken'),
         },
@@ -51,19 +51,19 @@ const Messanger = () => {
 
   const getConv = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/conversation/${FacebookUserId}`
+      `https://facebook-node.onrender.com/conversation/${FacebookUserId}`
     );
     setConversation(res.data);
   };
   const getConversionMsg = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/conversationmsg/${conversationId}`
+      `https://facebook-node.onrender.com/conversationmsg/${conversationId}`
     );
     setConversationMsg(res.data);
   };
   const getConversionMembers = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/conversationid/${conversationId}`
+      `https://facebook-node.onrender.com/conversationid/${conversationId}`
     );
     // console.log(res.data)
     setConversionMembers(res.data);
@@ -79,7 +79,7 @@ const Messanger = () => {
   }, [conversationId]);
 
   //    useEffect(() => {
-  //        socket.current = io("https://facebook-socket-server-production.up.railway.app/");
+  //        socket.current = io("https://facebook-clone-socket.onrender.com/");
   //        socket.current.emit("addUser", FacebookUserId);
   //        socket.current.on("getMessage", (data) => {
   //         console.log(data)

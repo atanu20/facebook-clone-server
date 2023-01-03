@@ -29,7 +29,7 @@ export default function Post({
       uid: FacebookUserId,
     };
     const res = await axios.post(
-      'https://facebook-node-js-production.up.railway.app/checklike',
+      'https://facebook-node.onrender.com/checklike',
       data
     );
     if (res.data.submit) {
@@ -45,7 +45,7 @@ export default function Post({
       uid: FacebookUserId,
     };
     const res = await axios.post(
-      'https://facebook-node-js-production.up.railway.app/like',
+      'https://facebook-node.onrender.com/like',
       data
     );
     //  console.log(res.data)

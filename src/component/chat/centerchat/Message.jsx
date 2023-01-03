@@ -9,7 +9,7 @@ const Message = ({ own, message, friendId }) => {
   const getUser = async () => {
     try {
       let res = await axios.get(
-        `https://facebook-node-js-production.up.railway.app/myprofile/${friendId}`
+        `https://facebook-node.onrender.com/myprofile/${friendId}`
       );
 
       // console.log(res.data)

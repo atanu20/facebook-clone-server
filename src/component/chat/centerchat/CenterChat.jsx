@@ -19,7 +19,7 @@ const CenterChat = ({
 
   const getConDetails = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/conversationid/${conversationId}`
+      `https://facebook-node.onrender.com/conversationid/${conversationId}`
     );
 
     const receiverId = res.data.members.find(
@@ -33,7 +33,7 @@ const CenterChat = ({
   }, [conversationId]);
 
   // useEffect(() => {
-  //     socket.current = io("https://facebook-socket-server-production.up.railway.app/");
+  //     socket.current = io("https://facebook-clone-socket.onrender.com/");
 
   //   }, []);
 
@@ -46,9 +46,7 @@ const CenterChat = ({
       text: newMessage,
     };
 
-    socket.current = io(
-      'https://facebook-socket-server-production.up.railway.app/'
-    );
+    socket.current = io('https://facebook-clone-socket.onrender.com/');
     socket.current.emit('addUser', FacebookUserId);
     socket.current.emit('sendMessage', {
       senderId: FacebookUserId,
@@ -58,7 +56,7 @@ const CenterChat = ({
 
     try {
       const res = await axios.post(
-        'https://facebook-node-js-production.up.railway.app/sendconv',
+        'https://facebook-node.onrender.com/sendconv',
         message
       );
       setConversationMsg([...conversationmsg, res.data]);

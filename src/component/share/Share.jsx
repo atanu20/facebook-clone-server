@@ -27,7 +27,7 @@ const Share = () => {
 
   const getmyimg = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/getmyimg/${FacebookUserId}`
+      `https://facebook-node.onrender.com/getmyimg/${FacebookUserId}`
     );
     setMyimg(res.data.profilePicture);
   };
@@ -74,7 +74,7 @@ const Share = () => {
         };
 
         let res = await axios.post(
-          'https://facebook-node-js-production.up.railway.app/uploadpost',
+          'https://facebook-node.onrender.com/uploadpost',
           data
         );
         if (res.data.submit) {
@@ -102,7 +102,7 @@ const Share = () => {
     // formData.append("user",FacebookUser)
     // formData.append("userproimg",myimg)
     // formData.append("user_id",FacebookUserId)
-    // let res=await axios.post("https://facebook-node-js-production.up.railway.app/uploadpost",formData);
+    // let res=await axios.post("https://facebook-node.onrender.com/uploadpost",formData);
     // console.log(res.data)
     // if(res.data.submit)
     // {

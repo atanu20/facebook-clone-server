@@ -16,7 +16,7 @@ const Followers = () => {
 
   const checkAuth = () => {
     axios
-      .get('https://facebook-node-js-production.up.railway.app/isAuth', {
+      .get('https://facebook-node.onrender.com/isAuth', {
         headers: {
           'x-access-token': localStorage.getItem('Facebooktoken'),
         },
@@ -41,9 +41,9 @@ const Followers = () => {
 
   const myfriend = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/getFollowers/${FacebookUserId}`
+      `https://facebook-node.onrender.com/getFollowers/${FacebookUserId}`
     );
-    //   const ress=await axios.get(`https://facebook-node-js-production.up.railway.app/getFollowing/${FacebookUserId}`)
+    //   const ress=await axios.get(`https://facebook-node.onrender.com/getFollowing/${FacebookUserId}`)
     //   console.log(res.data)
     //   console.log(ress.data)
     //   const dat=res.data.filter((val)=> ress.data.some((vall) =>  vall.following_id !== val.u_id ))

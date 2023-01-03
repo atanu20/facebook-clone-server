@@ -8,7 +8,7 @@ const OnlineName = ({ profilePicture, userID, getConv }) => {
   const FacebookUserId = localStorage.getItem('FacebookUserId');
   const getmyidname = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myname/${userID}`
+      `https://facebook-node.onrender.com/myname/${userID}`
     );
     // console.log(res.data)
     setPname(res.data.name);
@@ -30,7 +30,7 @@ const OnlineName = ({ profilePicture, userID, getConv }) => {
       receiverId: userID,
     };
     let res = await axios.post(
-      `https://facebook-node-js-production.up.railway.app/conversationroom`,
+      `https://facebook-node.onrender.com/conversationroom`,
       data
     );
     notify(res.data.msg);

@@ -8,7 +8,7 @@ const LeftName = ({ profilePicture, userid, convid, setConversationId }) => {
   const [pname, setPname] = useState('');
   const getmyidname = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myname/${userid}`
+      `https://facebook-node.onrender.com/myname/${userid}`
     );
     // console.log(res.data)
     setPname(res.data.name);

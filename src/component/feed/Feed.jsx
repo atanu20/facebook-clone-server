@@ -9,7 +9,7 @@ const Feed = ({ timeline, profile, FacebookUserId, pid, pname }) => {
 
   const getmydata = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/mypost/${pid}`
+      `https://facebook-node.onrender.com/mypost/${pid}`
     );
 
     //  console.log(res.data)
@@ -22,7 +22,7 @@ const Feed = ({ timeline, profile, FacebookUserId, pid, pname }) => {
 
   const gettimeline = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/timeline/${FacebookUserId}`
+      `https://facebook-node.onrender.com/timeline/${FacebookUserId}`
     );
 
     setPosts(

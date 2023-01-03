@@ -23,7 +23,7 @@ const Sidebar = () => {
   const [friend, setFriend] = useState([]);
   const myfriend = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/getallfd/${FacebookUserId}`
+      `https://facebook-node.onrender.com/getallfd/${FacebookUserId}`
     );
     // console.log(res.data)
     setFriend(res.data);

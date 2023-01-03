@@ -7,7 +7,7 @@ const FindName = ({ profilePicture, userID }) => {
 
   const getname = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myname/${userID}`
+      `https://facebook-node.onrender.com/myname/${userID}`
     );
     setName(res.data.name);
   };

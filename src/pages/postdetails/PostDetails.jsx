@@ -22,7 +22,7 @@ const PostDetails = () => {
 
   const checkAuth = () => {
     axios
-      .get('https://facebook-node-js-production.up.railway.app/isAuth', {
+      .get('https://facebook-node.onrender.com/isAuth', {
         headers: {
           'x-access-token': localStorage.getItem('Facebooktoken'),
         },
@@ -47,7 +47,7 @@ const PostDetails = () => {
 
   const getiddata = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/postdet/${postid}`
+      `https://facebook-node.onrender.com/postdet/${postid}`
     );
     setPostDet(res.data);
   };
@@ -58,7 +58,7 @@ const PostDetails = () => {
       uid: FacebookUserId,
     };
     const res = await axios.post(
-      'https://facebook-node-js-production.up.railway.app/checklike',
+      'https://facebook-node.onrender.com/checklike',
       data
     );
     if (res.data.submit) {
@@ -74,7 +74,7 @@ const PostDetails = () => {
       uid: FacebookUserId,
     };
     const res = await axios.post(
-      'https://facebook-node-js-production.up.railway.app/like',
+      'https://facebook-node.onrender.com/like',
       data
     );
     //  console.log(res.data)
@@ -84,7 +84,7 @@ const PostDetails = () => {
 
   const getmsg = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/postmsgdata/${postid}`
+      `https://facebook-node.onrender.com/postmsgdata/${postid}`
     );
     if (res.data.length) {
       setALLMsg(res.data);
@@ -94,15 +94,13 @@ const PostDetails = () => {
   };
 
   useEffect(() => {
-    socket.current = io(
-      'https://facebook-socket-server-production.up.railway.app/'
-    );
+    socket.current = io('https://facebook-clone-socket.onrender.com/');
   }, []);
 
   const onSub = async (e) => {
     e.preventDefault();
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myprofile/${FacebookUserId}`
+      `https://facebook-node.onrender.com/myprofile/${FacebookUserId}`
     );
     // console.log(res.data)
     const data = {
@@ -126,13 +124,10 @@ const PostDetails = () => {
       post_id: postid,
       user_id: postdet.user_id,
     };
-    await axios.post(
-      'https://facebook-node-js-production.up.railway.app/sendNotify',
-      valu
-    );
+    await axios.post('https://facebook-node.onrender.com/sendNotify', valu);
 
     const ress = await axios.post(
-      `https://facebook-node-js-production.up.railway.app/postmsg`,
+      `https://facebook-node.onrender.com/postmsg`,
       data
     );
     if (ress.data.submit) {

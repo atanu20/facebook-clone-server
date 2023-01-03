@@ -7,7 +7,7 @@ export default function Online({ userID, getConv }) {
   const [user, setUser] = useState([]);
   const getval = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myprofile/${userID}`
+      `https://facebook-node.onrender.com/myprofile/${userID}`
     );
 
     // console.log(res.data)

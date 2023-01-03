@@ -18,7 +18,7 @@ export default function Rightbar({
   const [friend, setFriend] = useState([]);
   const myfriend = async () => {
     const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/getallfd/${pid}`
+      `https://facebook-node.onrender.com/getallfd/${pid}`
     );
     // console.log(res.data)
     setFriend(res.data);

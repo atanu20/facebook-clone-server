@@ -8,15 +8,13 @@ const RightChat = ({ getConv }) => {
   const [onlineUser, setOnlineUser] = useState([]);
   const socket = useRef();
   useEffect(() => {
-    socket.current = io(
-      'https://facebook-socket-server-production.up.railway.app/'
-    );
+    socket.current = io('https://facebook-clone-socket.onrender.com/');
   }, []);
   useEffect(() => {
     socket.current?.emit('addUser', FacebookUserId);
     socket.current?.on('getUsers', async (users) => {
       const res = await axios.get(
-        `https://facebook-node-js-production.up.railway.app/getallfd/${FacebookUserId}`
+        `https://facebook-node.onrender.com/getallfd/${FacebookUserId}`
       );
       //  console.log(res.data.filter((val) => users.some((u) => u.userId === val.userID)))
       setOnlineUser(

@@ -16,7 +16,7 @@ const Friends = () => {
 
   const checkAuth = () => {
     axios
-      .get('https://facebook-node-js-production.up.railway.app/isAuth', {
+      .get('https://facebook-node.onrender.com/isAuth', {
         headers: {
           'x-access-token': localStorage.getItem('Facebooktoken'),
         },
@@ -40,9 +40,7 @@ const Friends = () => {
   }, []);
 
   const getfriends = async () => {
-    const res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/user`
-    );
+    const res = await axios.get(`https://facebook-node.onrender.com/user`);
     // console.log(res.data.filter((val)=>val.userID !== FacebookUserId).sort( ()=>Math.random()-0.5))
     setFriends(
       res.data
@@ -59,7 +57,7 @@ const Friends = () => {
   //         u_id:FacebookUserId,
   //         following_id:fid
   //     }
-  //     const res=await axios.post(`https://facebook-node-js-production.up.railway.app/follow`,data)
+  //     const res=await axios.post(`https://facebook-node.onrender.com/follow`,data)
   //     console.log(res.data)
 
   // }

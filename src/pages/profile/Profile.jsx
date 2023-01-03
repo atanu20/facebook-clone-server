@@ -39,7 +39,7 @@ export default function Profile() {
 
   const checkAuth = () => {
     axios
-      .get('https://facebook-node-js-production.up.railway.app/isAuth', {
+      .get('https://facebook-node.onrender.com/isAuth', {
         headers: {
           'x-access-token': localStorage.getItem('Facebooktoken'),
         },
@@ -75,7 +75,7 @@ export default function Profile() {
 
   const getmydata = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myprofile/${id}`
+      `https://facebook-node.onrender.com/myprofile/${id}`
     );
 
     //  console.log(res.data.reverse())
@@ -131,7 +131,7 @@ export default function Profile() {
             };
 
             let res = await axios.post(
-              'https://facebook-node-js-production.up.railway.app/updateprofile',
+              'https://facebook-node.onrender.com/updateprofile',
               data
             );
             if (res.data.submit) {
@@ -159,7 +159,7 @@ export default function Profile() {
     //     formData.append("relationship",relationship)
 
     //     formData.append("userId",FacebookUserId)
-    //     let res=await axios.post("https://facebook-node-js-production.up.railway.app/updateprofile",formData);
+    //     let res=await axios.post("https://facebook-node.onrender.com/updateprofile",formData);
     //     if(res.data.submit)
     //     {
     //       window.location.reload()
@@ -172,7 +172,7 @@ export default function Profile() {
 
   const getmyidname = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myname/${id}`
+      `https://facebook-node.onrender.com/myname/${id}`
     );
     // console.log(res.data)
     setPname(res.data.name);
@@ -184,7 +184,7 @@ export default function Profile() {
       following_id: id,
     };
     let res = await axios.post(
-      `https://facebook-node-js-production.up.railway.app/checkfollow`,
+      `https://facebook-node.onrender.com/checkfollow`,
       data
     );
     // console.log(res.data)
@@ -193,9 +193,7 @@ export default function Profile() {
   };
 
   useEffect(() => {
-    socket.current = io(
-      'https://facebook-socket-server-production.up.railway.app/'
-    );
+    socket.current = io('https://facebook-clone-socket.onrender.com/');
   }, []);
   const Follownow = async () => {
     const data = {
@@ -208,7 +206,7 @@ export default function Profile() {
       receiverId: id,
     });
     const res = await axios.post(
-      `https://facebook-node-js-production.up.railway.app/follow`,
+      `https://facebook-node.onrender.com/follow`,
       data
     );
     checkfollow();
@@ -220,7 +218,7 @@ export default function Profile() {
       following_id: id,
     };
     const res = await axios.post(
-      `https://facebook-node-js-production.up.railway.app/unfollow`,
+      `https://facebook-node.onrender.com/unfollow`,
       data
     );
     console.log(res.data);

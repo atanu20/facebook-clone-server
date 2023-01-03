@@ -6,7 +6,7 @@ const CenterName = ({ profilePicture, userID }) => {
   const [pname, setPname] = useState('');
   const getmyidname = async () => {
     let res = await axios.get(
-      `https://facebook-node-js-production.up.railway.app/myname/${userID}`
+      `https://facebook-node.onrender.com/myname/${userID}`
     );
     // console.log(res.data)
     setPname(res.data.name);
